@@ -1,0 +1,78 @@
+body,
+a {
+  font: 22px "Volkorn", serif;
+  color: pink;
+  background: hsl(244, 38%, 16%);
+  background-image: linear-gradient(
+    45deg,
+    hsl(244, 38%, 6%),
+    hsl(244, 38%, 26%)
+  );
+}
+a:hover,
+a:active,
+a:focus {
+  filter: brightness(120%);
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 55em;
+  margin: auto;
+  background-image: linear-gradient(
+    -45deg,
+    hsla(244, 38%, 6%, 25%),
+    hsl(244, 38%, 26%, 25%)
+  );
+  padding: 1em;
+  box-shadow: 50px 0px 60px hsla(244, 38%, 6%, 95%);
+}
+header {
+  width: 100%;
+  font: clamp(26px, 2vw, 44px) "Lexend Deca", sans-serif;
+  padding: 1em 0 0;
+  text-align: center;
+  text-decoration: overline;
+}
+
+section {
+  width: 50%;
+  padding: 0 1em;
+}
+img {
+  mix-blend-mode: multiply;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+figure {
+  display: grid;
+  place-items: center;
+  background: hsl(244, 38%, 76%);
+  border: 0.5px solid hsl(244, 38%, 16%);
+  box-shadow: 8px 12px 0 hsl(244, 38%, 6%);
+  border-radius: 2px;
+  transform: rotate(-4deg);
+}
+figcaption {
+  color: hsl(244, 38%, 16%);
+  text-align: center;
+  padding: 1em;
+}
+
+@media (max-width: 960px) {
+  main {
+    flex-flow: column;
+  }
+  section {
+    width: 100%;
+  }
+  figure {
+    transform: rotate(0deg);
+  }
+  aside {
+    order: 3;
+  }
+}
